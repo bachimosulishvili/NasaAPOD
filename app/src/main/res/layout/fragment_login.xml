@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".fragment.LoginFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="-20dp"
+            android:src="@drawable/ic_nasa_logo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:fontFamily="@font/nasalization"
+            android:text="Nasa APOD"
+            android:textColor="@color/nasaColor"
+            android:textSize="30sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/boxEmail"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/email"
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusTopStart="30dp"
+            app:boxStrokeColor="@color/transparent"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/ic_email">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/nasalization"
+                android:lines="1"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/boxPassword"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/password"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="30dp"
+            app:boxStrokeColor="@color/transparent"
+            app:endIconMode="password_toggle"
+            app:startIconDrawable="@drawable/ic_password">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/nasalization"
+                android:inputType="textPassword"
+                android:lines="1"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/boxRepeat"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/repeat_password"
+            android:visibility="gone"
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusTopStart="30dp"
+            app:boxStrokeColor="@color/transparent"
+            app:endIconMode="password_toggle"
+            app:startIconDrawable="@drawable/ic_password">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etRepeatPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/nasalization"
+                android:inputType="textPassword"
+                android:lines="1"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvError"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nasalization"
+            android:gravity="start"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="Error Text Goes Here"
+            android:textColor="@color/errorRed"
+            android:visibility="invisible" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogIn"
+            android:layout_width="350dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button"
+            android:fontFamily="@font/nasalization"
+            android:text="@string/log_in"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tvDontHaveAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/nasalization"
+            android:text="Don't have an account?"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSignUpNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nasalization"
+            android:gravity="center"
+            android:text="SIGN UP"
+            android:textColor="@color/nasaColor"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSignUp"
+            android:layout_width="350dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button"
+            android:fontFamily="@font/nasalization"
+            android:text="@string/sign_up"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvHaveAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/nasalization"
+            android:text="Already have an account?"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLogIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nasalization"
+            android:gravity="center"
+            android:text="LOG IN"
+            android:textColor="@color/nasaColor"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</LinearLayout>

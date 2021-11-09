@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Nasa APOD</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="splash_screen_description">Nasa Logo</string>
+    <string name="nasa_apod">Nasa APOD</string>
+    <string name="credits">Created by Bachana Mosulishvili</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="repeat_password">Repeat Password</string>
+
+    <string name="error_password_check">Check your password.</string>
+    <string name="error_email_check">Check your email.</string>
+    <string name="error_exists">This user already exists. Please log in or sign up with different email.</string>
+    <string name="error_pw_match">Passwords do not match.</string>
+    <string name="error_pw_length">Password must be longer than 8 characters.</string>
+    <string name="error_email">Enter valid email.</string>
+    <string name="error_incorrect">Email and/or password is incorrect.</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+</resources>

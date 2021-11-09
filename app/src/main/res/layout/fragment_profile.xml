@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".fragment.ProfileFragment">
+
+    <View
+        android:id="@+id/vHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/nasaColor"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivNasa"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_nasa_logo"
+        app:layout_constraintBottom_toBottomOf="@id/vHeader"
+        app:layout_constraintEnd_toEndOf="@id/vHeader"
+        app:layout_constraintTop_toTopOf="@id/vHeader" />
+
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:fontFamily="@font/nasalization"
+        android:text="@string/nasa_apod"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@id/vHeader"
+        app:layout_constraintEnd_toEndOf="@id/vHeader"
+        app:layout_constraintStart_toStartOf="@id/vHeader"
+        app:layout_constraintTop_toTopOf="@id/vHeader" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vHeader"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp">
+
+        <LinearLayout
+            android:id="@+id/boxEmail"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/box"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nasalization"
+                android:text="Email:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:fontFamily="@font/nasalization"
+                android:text="username@gmail.com"
+                android:textColor="@color/grey" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llChangePassword"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/box"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nasalization"
+                android:text="Change Password"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/modePasswordChange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/box"
+                android:gravity="start"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nasalization"
+                    android:text="Old Password"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/boxOldPassword"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxCornerRadiusBottomEnd="30dp"
+                    app:boxCornerRadiusBottomStart="30dp"
+                    app:endIconMode="password_toggle">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etOldPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/nasalization" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/box"
+                android:gravity="start"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nasalization"
+                    android:text="New Password"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/boxNewPassword"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxCornerRadiusBottomEnd="30dp"
+                    app:boxCornerRadiusBottomStart="30dp"
+                    app:endIconMode="password_toggle">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etNewPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/nasalization" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/box"
+                android:gravity="start"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nasalization"
+                    android:text="Repeat New Password"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/boxNewPasswordRepeat"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxCornerRadiusBottomEnd="30dp"
+                    app:boxCornerRadiusBottomStart="30dp"
+                    app:endIconMode="password_toggle">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etNewPasswordRepeat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/nasalization" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:padding="20dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnChange"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="@font/nasalization"
+                    android:text="Change"
+                    android:textSize="20sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCancel"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button"
+                    android:backgroundTint="@color/errorRed"
+                    android:fontFamily="@font/nasalization"
+                    android:text="Cancel"
+                    android:textSize="20sp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

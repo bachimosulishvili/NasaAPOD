@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "824706280475",
+    "project_id": "nasa-apod-da1a4",
+    "storage_bucket": "nasa-apod-da1a4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824706280475:android:363547baf1ac987ae29cbe",
+        "android_client_info": {
+          "package_name": "com.example.nasaapod"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "824706280475-qd3eht99d2878usd7e632e4b1br478bb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJ9OEijWBrEvespn2eJ0ZdO2DmQ22jqME"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "824706280475-qd3eht99d2878usd7e632e4b1br478bb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
