@@ -19,25 +19,27 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivNasa"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:tint="@color/white"
         android:layout_marginEnd="10dp"
-        android:src="@drawable/ic_nasa_logo"
+        android:src="@drawable/ic_profile"
         app:layout_constraintBottom_toBottomOf="@id/vHeader"
         app:layout_constraintEnd_toEndOf="@id/vHeader"
         app:layout_constraintTop_toTopOf="@id/vHeader" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/toggle"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="10dp"
-        android:src="@drawable/ic_nasa_logo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/ic_gallery"
+        android:tint="@color/white"
         app:layout_constraintBottom_toBottomOf="@id/vHeader"
         app:layout_constraintStart_toStartOf="@id/vHeader"
         app:layout_constraintTop_toTopOf="@id/vHeader" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvHeader"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
@@ -64,90 +66,91 @@
     <View
         android:background="@drawable/gradient"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vHeader"
         android:id="@+id/gradient"/>
 
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:fontFamily="@font/nasalization"
-        android:text="Lorem Ipsum"
+        android:text="@string/lorem_ipsum"
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/description"
         app:layout_constraintStart_toStartOf="@id/ViewPager" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:fontFamily="@font/nasalization"
-        android:text="Lorem Ipsum Dolor Set Amet."
+        android:text="@string/lorem_ipsum_dolor_set_amet"
         android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@id/author"
         app:layout_constraintStart_toStartOf="@id/ViewPager" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/author"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:fontFamily="@font/nasalization"
-        android:text="Lorem Ipsum"
+        android:text="@string/lorem_ipsum"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/ViewPager"
         app:layout_constraintStart_toStartOf="@id/ViewPager" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@id/ViewPager"
         app:layout_constraintStart_toStartOf="@id/ViewPager"
-        android:text="01/01/2021"
+        android:text="@string/_01_01_2021"
         android:textColor="@color/middle_grey"
         android:fontFamily="@font/nasalization"
         android:textSize="20sp"
         android:layout_marginStart="10dp"/>
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/current"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@id/ViewPager"
         app:layout_constraintEnd_toStartOf="@+id/slash"
-        android:text="1"
+        android:text="@string/_1"
         android:textColor="@color/middle_grey"
         android:fontFamily="@font/nasalization"
         android:textSize="25sp"/>
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/slash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="/"
+        android:text="@string/slash"
         android:textColor="@color/middle_grey"
         android:fontFamily="@font/nasalization"
         android:textSize="35sp"
         app:layout_constraintTop_toTopOf="@id/ViewPager"
         app:layout_constraintEnd_toStartOf="@id/total"/>
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@id/ViewPager"
         app:layout_constraintEnd_toEndOf="@id/ViewPager"
-        android:text="10"
+        android:text="@string/_10"
         android:textColor="@color/middle_grey"
         android:fontFamily="@font/nasalization"
         android:textSize="35sp" />

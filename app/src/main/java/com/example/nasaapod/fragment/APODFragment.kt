@@ -1,25 +1,16 @@
 package com.example.nasaapod.fragment
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.example.nasaapod.PhotosAdapter
 import com.example.nasaapod.R
 import com.example.nasaapod.databinding.FragmentApodBinding
 import com.example.nasaapod.model.Photo
-import com.example.nasaapod.network.RetrofitInstance
-import com.example.nasaapod.network.RetrofitInstance.API_KEY
-import com.example.nasaapod.network.RetrofitInstance.TOTAL
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import retrofit2.HttpException
-import java.io.IOException
 
 var pList = mutableListOf<Photo>()
 
@@ -28,7 +19,7 @@ class APODFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
+    ): View {
         binding = FragmentApodBinding.inflate(inflater)
         return binding.root
     }
@@ -40,7 +31,6 @@ class APODFragment : Fragment() {
 
     private fun init() {
         listeners()
-        request()
         setupRecycler()
     }
 
@@ -82,30 +72,7 @@ class APODFragment : Fragment() {
         })
     }
 
-    private fun request() {
-        lifecycleScope.launch(Dispatchers.IO) {
-            val response = try {
-                RetrofitInstance.api.getPhotos(API_KEY, TOTAL)
-            } catch (e: IOException) {
-                Log.d("TAG", "$e")
-                return@launch
-            } catch (e: HttpException) {
-                Log.d("TAG", "$e")
-                return@launch
-            }
-            if (response.isSuccessful && response.body() != null) {
-                response.body() ?: mutableListOf()
-                pList = response.body()!!.toMutableList()
-                Log.d("TAG", "$response : ${response.body()}")
-                return@launch
-            } else {
-                Log.d("TAG", "Else called in ViewModel. Unexpected.")
-                Log.d("RESPONSE", "${response.body()}")
-            }
 
-            return@launch
-        }
-    }
 
     private fun toggleVisibility(view: View) {
         if (view.visibility == View.VISIBLE) {

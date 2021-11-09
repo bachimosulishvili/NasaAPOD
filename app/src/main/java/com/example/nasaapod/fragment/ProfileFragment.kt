@@ -1,27 +1,23 @@
 package com.example.nasaapod.fragment
 
-import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log.d
-import android.view.Gravity
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.nasaapod.R
 import com.example.nasaapod.auth
 import com.example.nasaapod.databinding.FragmentProfileBinding
 import com.google.firebase.auth.AuthCredential
 import com.google.firebase.auth.EmailAuthProvider
-import java.lang.Exception
 
 class ProfileFragment : Fragment() {
     private lateinit var binding: FragmentProfileBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
+    ): View {
         binding = FragmentProfileBinding.inflate(inflater)
         return binding.root
     }
@@ -38,7 +34,7 @@ class ProfileFragment : Fragment() {
 
     private fun listeners() {
 
-        binding.ivNasa.setOnClickListener {
+        binding.ivLogOut.setOnClickListener {
             auth.signOut()
             this.findNavController().popBackStack(R.id.loginFragment, false)
 
